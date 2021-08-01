@@ -1,0 +1,47 @@
+<div *ngIf="loading" style="height: 300px" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-card *ngIf="!loading">
+    <mat-card-header>
+        <mat-card-title>ALAMAT</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="uk-flex">
+            <span class="uk-width-expand"></span>
+            <button mat-flat-button color="primary" style="background-color: darkslateblue;" (click)="productDetail({},-1)">Tambah Alamat</button>
+        </div>
+        <table class="uk-table uk-table-middle uk-table-divider">
+            <thead>
+                <th></th>
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>PROVINSI</th>
+                <th>NO HANDPHONE</th>
+                <th>EMAIL</th>
+                <th align="right"></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books; let idx=index">
+                    <td>
+                        <button mat-icon-button (click)="detailItem(book,idx)">
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                    </td>
+                    <td>{{idx+1}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.province}}</td>
+                    <td>{{book.phone}}</td>
+                    <td>{{book.email}}</td>
+                    <td align="right">
+                        <button mat-icon-button (click)="productDetail(book, idx)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="deleteProduct(book.id, idx)"[disabled]="loadingDelete[idx]">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

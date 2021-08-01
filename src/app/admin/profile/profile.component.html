@@ -1,0 +1,58 @@
+<div mat-dialog-content>
+    <mat-list>
+        <h3 matSubheader>Detail Alamat</h3>
+        <mat-list-item>
+            <mat-icon matListIcon>person</mat-icon>
+            <p matLine>NAMA</p>
+            <h3 mat-line>{{data.name}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>local_hotel</mat-icon>
+            <p matLine>ALAMAT</p>
+            <h3 mat-line>{{data.address}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <p matLine>KOTA</p>
+            <h3 mat-line>{{data.city}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>location_city</mat-icon>
+            <p matLine>PROVINSI</p>
+            <h3 mat-line>{{data.province}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>local_post_office</mat-icon>
+            <p matLine>KODE POS</p>
+            <h3 mat-line>{{data.post}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>call</mat-icon>
+            <p matLine>NO HANDPHONE</p>
+            <h3 mat-line>{{data.phone}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>alternate_email</mat-icon>
+            <p matLine>EMAIL</p>
+            <h3 mat-line>{{data.email}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+    </mat-list>
+</div>
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Tutup</button>
+</mat-dialog-actions>

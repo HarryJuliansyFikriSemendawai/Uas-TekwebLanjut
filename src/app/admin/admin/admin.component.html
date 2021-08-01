@@ -1,0 +1,58 @@
+<ng-container>
+  <!--toolbar-->
+  <mat-toolbar color="primary" style="background-color: sienna;" class="example-header">
+      <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>apps</mat-icon>
+      </button>
+      <span>BUKU ALAMAT DAN KONTAK</span>
+      <div class="uk-width-expand"></div>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)='logout()'><span class="material-icons">power_settings_new</span>Keluar</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="appMenu"><span class="material-icons">settings</span></button>
+  </mat-toolbar>
+  <!--end toolbar-->
+
+  <mat-sidenav-container  class="example-container">
+  
+    <mat-sidenav style="background-color: plum;" #sidenav mode="side" [position]="'start'" opened class="sidenav-left"
+    [fixedInViewport]="true" [fixedTopGap]="60"
+    [fixedBottomGap]="0">
+  
+    <mat-nav-list>
+      <mat-list-item routerLink="/admin/dashboard">
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <h3 matLine>DASHBOARD</h3>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item routerLink="/admin/product">
+        <span matListIcon class="material-icons">dns</span>
+          <h3 matLine>ALAMAT & KONTAK</h3>
+      </mat-list-item>
+    </mat-nav-list>
+
+    </mat-sidenav>
+  
+  <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-container"
+  [fixedInViewport]="true" [fixedTopGap]="60" 
+  [fixedBottomGap]="0">
+  
+     
+  
+  </mat-sidenav>
+  <!--sidenav content-->
+  <mat-sidenav-content style="padding: 20px; background-color: #ccc;">
+  <!--halaman-halaman tampil disini-->
+  
+ 
+<router-outlet></router-outlet>
+  
+  
+  
+  </mat-sidenav-content>
+  <!--end sidenav content-->
+  </mat-sidenav-container>   
+  </ng-container>
+
+  

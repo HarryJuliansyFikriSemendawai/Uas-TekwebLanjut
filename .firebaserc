@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "katalog-buku-8f612": {
+      "hosting": {
+        "my-App": [
+          "katalog-buku-8f612"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "katalog-buku-8f612"
+  }
+}

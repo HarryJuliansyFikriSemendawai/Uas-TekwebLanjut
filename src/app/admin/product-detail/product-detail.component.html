@@ -1,0 +1,37 @@
+<h3 mat-dialog-title>
+    Detail Alamat
+</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>NAMA</mat-label>
+        <input matInput [(ngModel)]="data.name">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>ALAMAT</mat-label>
+        <input matInput [(ngModel)]="data.address">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>KOTA</mat-label>
+        <input matInput [(ngModel)]="data.city">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>PROVINSI</mat-label>
+        <input matInput [(ngModel)]="data.province">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>KODE POS</mat-label>
+        <input matInput [(ngModel)]="data.post">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>NO HANDPHONE</mat-label>
+        <input matInput [(ngModel)]="data.phone">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>EMAIL</mat-label>
+        <input matInput [(ngModel)]="data.email">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+<button mat-button mat-dialog-close>Batal</button>
+<button mat-flat-button (click)="saveData()" color="primary" style="background-color: darkslateblue;" [disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+</div>
